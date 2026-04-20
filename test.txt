@@ -37,17 +37,23 @@ curl --location 'https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings' \
 
 
 {
+  "gateway": {
+    "mode": "local",
+    "bind": "loopback",
+    "port": 18789
+  },
   "models": {
     "providers": {
-      "volcengine-plan": {
-        "baseUrl": "https://ark.cn-beijing.volces.com/api/coding/v3",
-        "apiKey": "你的方舟API Key",
+      "volcengine": {
+        "baseUrl": "https://ark.cn-beijing.volces.com/api/v3",
+        "apiKey": "ark-3c590e1c-eefd-4432-ad9e-a7b2c1fe15e7-d1638",
         "api": "openai-completions",
         "models": [
           {
-            "id": "你的接入点ID",
-            "name": "doubao-seed-code",
-            "contextWindow": 128000
+            "id": "doubao-seed-2-0-pro-260215",
+            "name": "Doubao-Seed-2.0-pro",
+            "contextWindow": 256000,
+            "maxTokens": 204800
           }
         ]
       }
@@ -56,7 +62,7 @@ curl --location 'https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings' \
   "agents": {
     "defaults": {
       "model": {
-        "primary": "volcengine-plan/你的接入点ID"
+        "primary": "volcengine/doubao-seed-2-0-pro-260215"
       }
     }
   }
