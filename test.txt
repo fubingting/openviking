@@ -8,3 +8,10 @@ curl --location 'https://open.bigmodel.cn/api/paas/v4/chat/completions' \
     ]
 }'
 8add9ac034004d03a992486824597edc.M5zG0BUGwyfRVS17
+curl --location 'https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings' \
+--header 'Authorization: Bearer 你的_API_Key' \
+--header 'Content-Type: application/json' \
+--data '{
+    "model": "text-embedding-v4",
+    "input": ["你好"]
+}'
