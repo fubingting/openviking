@@ -34,3 +34,30 @@ curl --location 'https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings' \
     "model": "text-embedding-v4",
     "input": ["这是一个测试，用于验证我的API Key是否有效。"]
 }'
+
+
+{
+  "models": {
+    "providers": {
+      "volcengine-plan": {
+        "baseUrl": "https://ark.cn-beijing.volces.com/api/coding/v3",
+        "apiKey": "你的方舟API Key",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "你的接入点ID",
+            "name": "doubao-seed-code",
+            "contextWindow": 128000
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "volcengine-plan/你的接入点ID"
+      }
+    }
+  }
+}
