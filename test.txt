@@ -7,3 +7,4 @@ curl --location 'https://open.bigmodel.cn/api/paas/v4/chat/completions' \
         {"role": "user", "content": "你好，请回复"ok""}
     ]
 }'
+8add9ac034004d03a992486824597edc.M5zG0BUGwyfRVS17
