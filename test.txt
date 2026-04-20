@@ -67,3 +67,5 @@ curl --location 'https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings' \
     }
   }
 }
+
+curl -fsSL https://raw.githubusercontent.com/volcengine/OpenViking/main/examples/openclaw-memory-plugin/install.sh | bash
