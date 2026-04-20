@@ -15,3 +15,22 @@ curl --location 'https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings' \
     "model": "text-embedding-v4",
     "input": ["你好"]
 }'
+
+
+curl --location 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions' \
+--header 'Authorization: Bearer 你的_API_Key' \
+--header 'Content-Type: application/json' \
+--data '{
+    "model": "qwen-plus",
+    "messages": [
+        {"role": "user", "content": "你好，请简单介绍一下你自己"}
+    ]
+}'
+
+curl --location 'https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings' \
+--header 'Authorization: Bearer 你的_API_Key' \
+--header 'Content-Type: application/json' \
+--data '{
+    "model": "text-embedding-v4",
+    "input": ["这是一个测试，用于验证我的API Key是否有效。"]
+}'
